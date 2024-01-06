@@ -30,3 +30,16 @@ const fun = function() {
 }
 
 console.table([typeof arr, typeof obj, typeof fun]);
+
+
+
+
+
+
+
+// *******************Understanding of memory**********************
+/*
+Stack (primitive) -> Here we get copy of value
+
+Heap (Non-primitive or Referance) -> Here we get referance of value 
+*/
