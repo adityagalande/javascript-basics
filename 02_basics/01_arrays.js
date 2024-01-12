@@ -22,7 +22,12 @@ console.table([typeof giveStringArray, giveStringArray]);
 
 
 let concatArray = arr1.concat(arr2)
-console.log(concatArray.length);
+console.log(concatArray.length)
+// console.log(concatArray);
+
+const spreadJointArray = [...arr1, ...arr2]; //Here spread operator concats multipal arrays
+// console.log(`Spread Operator -> ${spreadJointArray}`)
+console.log(spreadJointArray)
 
 // ---------------------------------------------------
 let arr3 = [1,2,3,4,5]
@@ -53,3 +58,13 @@ let arr6 = [9,8,7,6,5]
 let arr7 = arr6.splice(1,3); //It prints elements at index 1, 2 and 3. Also it make change in original array. By excluding element, whose index is kept in splice method.
 console.log(`spliced array -> ${arr7}`) 
 console.log(`original array -> ${arr6}`)
+// ---------------------------------------------------
+
+console.log(Array.isArray("Palash"))
+console.log(Array.from("Palash"))
+
+let v1 = "USA"
+let v2 = "Canada"
+let v3 = "India"
+
+console.log(Array.of(v1, v2, v3));
