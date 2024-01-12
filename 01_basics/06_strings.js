@@ -20,3 +20,5 @@ console.log(str.replace("Sta", "Mta")); //It will replace
 console.log(str.includes("ted")); //It will return boolean
 
 console.log(str.split(" ")); //It will make it array
+
+console.log(str.includes("Z"));
