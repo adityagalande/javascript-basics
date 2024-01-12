@@ -49,7 +49,7 @@ console.log(`sliced array -> ${arr5}`)
 console.log(`original array -> ${arr4}`)
 // -------------------------SPLICE--------------------------
 let arr6 = [9,8,7,6,5]
-
+// `splice` manipulates original Array
 let arr7 = arr6.splice(1,3); //It prints elements at index 1, 2 and 3. Also it make change in original array. By excluding element, whose index is kept in splice method.
 console.log(`spliced array -> ${arr7}`) 
 console.log(`original array -> ${arr6}`)
