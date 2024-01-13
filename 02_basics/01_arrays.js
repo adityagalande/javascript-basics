@@ -23,7 +23,7 @@ console.table([typeof giveStringArray, giveStringArray]);
 
 let concatArray = arr1.concat(arr2)
 console.log(concatArray.length)
-// console.log(concatArray);
+console.log(concatArray);
 
 const spreadJointArray = [...arr1, ...arr2]; //Here spread operator concats multipal arrays
 // console.log(`Spread Operator -> ${spreadJointArray}`)
@@ -60,8 +60,8 @@ console.log(`spliced array -> ${arr7}`)
 console.log(`original array -> ${arr6}`)
 // ---------------------------------------------------
 
-console.log(Array.isArray("Palash"))
-console.log(Array.from("Palash"))
+console.log(Array.isArray("Palash")) //false
+console.log(Array.from("Palash"))  // output : [ 'P', 'a', 'l', 'a', 's', 'h' ]
 
 let v1 = "USA"
 let v2 = "Canada"
