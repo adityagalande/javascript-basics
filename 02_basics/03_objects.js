@@ -2,7 +2,7 @@
 
 const mySymbol = Symbol("USSR");
 
-//Object Literals
+//This is -> Object Literals
 const JsUser = {
     name: "Vladimir",
     age: 27,
