@@ -15,6 +15,11 @@ Obj["full name"] = {
 console.log(Obj["full name"].lastName);
 console.log(Obj);
 
+
+console.log(Object.keys(Obj)); //It gives arrays of all keys in 'Obj' Object
+console.log(Object.values(Obj)); //It gives arrays of all values in 'Obj' Object
+console.log(Object.hasOwnProperty("name")); //It check and return boolean value whether value is present or not.
+
 // Merging Objects using spread operator
 const Obj1 = {1: "a", 2: "b"};
 const Obj2 = {3: "c", 4: "d"};
