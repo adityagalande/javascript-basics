@@ -14,3 +14,11 @@ Obj["full name"] = {
 
 console.log(Obj["full name"].lastName);
 console.log(Obj);
+
+// Merging Objects using spread operator
+const Obj1 = {1: "a", 2: "b"};
+const Obj2 = {3: "c", 4: "d"};
+
+const Obj3 = {...Obj1, ...Obj2};
+console.log(Obj3);
+
