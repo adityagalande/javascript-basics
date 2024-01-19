@@ -22,7 +22,7 @@ console.log(JsUser[mySymbol]); //This is how we call Symbol datatype in Object K
 
 //We can put function in Object
 JsUser.language = function(){
-    console.log("Slavic Russian");
+    console.log(`Slavic Russian capital region part of ${JsUser["capital city"]} `);
 };
 
 console.log(JsUser.language());
