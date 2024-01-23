@@ -26,3 +26,24 @@ console.log(`Result : ${res}`);
 function getDefaultvalue(name = "Joe"){
     return `name is ${name}`;
 }
+
+//"Rest Operator"------->
+
+function calculateCarPrice(val1, val2, ...val){
+    console.log(val);
+}
+
+calculateCarPrice(1,2,3,4,5)
+
+
+const car = {
+    name: `Kia Sonet`,
+    model: `GT-Line`,
+    type: `FWD`
+}
+
+function carObject(obj){
+    console.table([obj.name, obj.model, obj.type]);
+}
+
+carObject(car);
