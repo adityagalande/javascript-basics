@@ -20,3 +20,9 @@ console.log(addNums(9,9));
 
 const res = addNums(7,5);
 console.log(`Result : ${res}`);
+
+
+//If we dont passarguments then default value is used. It will never be undefined.
+function getDefaultvalue(name = "Joe"){
+    return `name is ${name}`;
+}
