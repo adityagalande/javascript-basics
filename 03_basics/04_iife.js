@@ -4,6 +4,8 @@
 () ()
 
 Here first parenthesis for Define function & second for calling function
+
+[we use iife to avoid pollution from global scoped variables]
 */
 
 (function divNum(){
