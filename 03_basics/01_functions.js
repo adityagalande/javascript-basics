@@ -28,7 +28,6 @@ function getDefaultvalue(name = "Joe"){
 }
 
 //"Rest Operator"------->
-
 function calculateCarPrice(val1, val2, ...val){
     console.log(val);
 }
@@ -42,6 +41,7 @@ const car = {
     type: `FWD`
 }
 
+//Here Object passed as parameter to function
 function carObject(obj){
     console.table([obj.name, obj.model, obj.type]);
 }
