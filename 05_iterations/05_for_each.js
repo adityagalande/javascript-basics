@@ -40,3 +40,7 @@ const objArr = [
     }
 ];
 
+
+objArr.forEach( (val) =>{
+    console.log(`Name : ${val.name} & Extension : ${val.fileName}`);
+})
