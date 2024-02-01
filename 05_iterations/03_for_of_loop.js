@@ -10,3 +10,17 @@ const str = "Hello JavaScript!!";
 for(const iterator of str){
     console.log(iterator)
 }
+
+
+// map is Obj, which holdes key value pairs. It keep insertion order of key
+const map = new Map();
+
+
+
+const obj = {
+    n: 1,
+    p: 2,
+    m: 3
+}
+
+console.log(Object.values(obj));
