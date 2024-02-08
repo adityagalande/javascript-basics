@@ -11,10 +11,32 @@ const books = [
   ];
 
 
-  let genre = books.filter((bk) => (bk.genre === "History"))
+let genre = books.filter((bk) => (bk.genre === "History"))
 //   console.log(genre);
 
-  let details = books.filter((bk) => {return (bk.genre === "History") && (bk.publish >= 1995)})
-  console.log(details);
+let details = books.filter((bk) => {return (bk.genre === "History") && (bk.publish >= 1995)})
+console.log(details);
 
 books.forEach((b) => { console.log(b.title)})
+
+// ---------------------------------------------------------------------------------------------
+// Map Returns a Value and It creates new array from existing & it do not execute empty array
+const arr = [0,1,2,3,4,5,6,7,8,9]
+
+let res =arr.map((val) => ( val *10))
+console.log(res);
+
+let chaining = arr
+                .map((val) =>(val *10))
+                .map((val) => val+1)
+                .filter((val) => (val >=60))
+
+console.log(chaining)
+
+// ------------------------------------------Reduce---------------------------------------------------
+
+const myTotal = arr.reduce( function(accumolator, currentValue) {
+  return accumolator + currentValue;
+}, 0 )
+
+console.log(myTotal);
