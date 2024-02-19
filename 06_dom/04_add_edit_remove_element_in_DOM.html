@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: bisque;">
+    <ul class="language">
+        <li>javaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang){
+        const li = document.createElement('li')
+        li.innerText = `${lang}`;
+        document.querySelector('.language').appendChild(li); //Here append add html to page, which previously inside memory only
+    }
+
+    addLanguage('Java')
+    addLanguage('Python')
+    addLanguage('TypeScript')
+
+// ----------------------Another way to do this----------------------
+
+    function addlanguageOptinize(lang){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addlanguageOptinize('C++')
+    addlanguageOptinize('Go Lang')
+
+    // ----------------------Edit Element----------------------
+
+    // console.log(document.querySelector("li:nth-child(2)")); //This select second child in <li>
+        
+        const secondLang = document.querySelector("li:nth-child(2)"); //Here selected second HTML element.
+        // secondLang.innerHTML = "C#" //Here we edited <li> tag using innerHTML (if we use this then below steps no required)
+        const newli = document.createElement('li'); //Here created new li html tag.
+        newli.textContent = "C#"; //Here new text is entered.
+        secondLang.replaceWith(newli); //Here replaced existing li tag.
+
+        //Second Edit method
+
+        const firstLang = document.querySelector('li:first-child'); //Here we se
+        firstLang.outerHTML = '<li>Ruby</li>' //Here we edited first li tag using outerHTML
+
+        
+    // ----------------------Remove Element----------------------
+
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+
+</script>
+</html>
