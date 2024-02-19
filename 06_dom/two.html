@@ -15,13 +15,22 @@
 </body>
 <script>
     const parent = document.querySelector('.parent');
-    console.log(parent);
+    console.log(parent)
+    console.log(parent.children); //gives html collections
+    console.log(parent.children[2])
+    parent.children[2].style.color = 'orange';
+    console.log(parent.children[2].innerText)
     console.log(parent.lastElementChild);
     console.log(parent.firstElementChild);
+    console.log("Nodes :- ", parent.childNodes); //This gives nodes including text values(enter pressed t go to next line)
+    console.log(parent.children[2].parentElement); //This gives parent element
 
-    (document.querySelector('.day')).style.color = "red"
-
+    const dayOne = document.querySelector('.day');
+    console.log(dayOne.parentElement); //This gives parent element
+    console.log(dayOne.nextElementSibling)
+    
     const val = document.querySelectorAll('.day');
     val[1].innerText = "Day Changed"
+
 </script>
 </html>
