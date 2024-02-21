@@ -42,6 +42,9 @@
     console.log(document.getElementById('title')) //This gives html tag
     console.log(document.getElementById('title').id) //This gives id of that tag   
     console.log(document.getElementById('title').getAttribute('class')) //Thsi getAttribute('class') gives required value 
+    document.querySelector('ul').setAttribute('class', 'list-items') //This setAttribute(_, _) set value to the element. But it override class here. 
+
+    console.log(document.querySelector('.list-item').className) //This gives classname of <li> tag
 
     document.querySelector('#title').style.color = 'orange'
     document.querySelector('#title').innerText = "ADITYA ULHAS GALANDE"
