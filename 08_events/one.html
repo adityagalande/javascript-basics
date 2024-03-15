@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events Basics</title>
+</head>
+<body>
+    <h2>Creative Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="india" src="https://images.pexels.com/photos/574324/pexels-photo-574324.jpeg?auto=compress&cs=tinysrgb&w=800" alt="photoshop"></li>
+            <li><img width="200px" id="usa" src="https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg?auto=compress&cs=tinysrgb&w=800" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/1822605/pexels-photo-1822605.jpeg?auto=compress&cs=tinysrgb&w=800" alt="photoshop"></li>
+            <li><img width="200px" id="canada" src="https://images.pexels.com/photos/1750754/pexels-photo-1750754.jpeg?auto=compress&cs=tinysrgb&w=800" alt="photoshop"></li>
+            <li><img width="200px" id="russia" src="https://images.pexels.com/photos/8285167/pexels-photo-8285167.jpeg?auto=compress&cs=tinysrgb&w=800" alt="photoshop"></li>
+            <li><img width="200px" id="israel" src="https://images.pexels.com/photos/1659293/pexels-photo-1659293.jpeg?auto=compress&cs=tinysrgb&w=800" alt="photoshop"></li>
+            <li><img width="200px" id="rawanda" src="https://images.pexels.com/photos/16168264/pexels-photo-16168264/free-photo-of-antelopes-and-jeep-in-maasai-mara-game-reserve-in-kenya.jpeg?auto=compress&cs=tinysrgb&w=800" alt="photoshop"></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // Type, Timestamp, defaultPrevent
+    // Target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, keyCode
+    document.getElementById('japan').addEventListener('click', function(e){
+        document.querySelector('#japan').style.padding = '50px'
+        // alert("japan");
+        console.table([e.type, e.timeStamp, e])
+    })
+</script>
+</html>
