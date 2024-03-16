@@ -28,7 +28,33 @@
     document.getElementById('japan').addEventListener('click', function(e){
         document.querySelector('#japan').style.padding = '50px'
         // alert("japan");
-        console.table([e.type, e.timeStamp, e])
+     console.table([e.type, e.timeStamp, e])
+
+    //Event propogation (bubbling from inside to outside -> if it is FALSE, But if TRUE then outside to inside bubbling)
+    document.querySelector('#images').addEventListener('click', function(e){
+        alert(e.target.tagName);
+        }, false)
+                                            
+    document.querySelector('#usa').addEventListener('click', function(e){
+        alert(e.target.id)
+        e.stopPropagation(); //This prevents bubbling.
+        }, false)
+
+        document.getElementById('google').addEventListener('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            //alert('google clicked');
+        },false)
+
+
+        document.querySelector('#images').addEventListener('click', function(e){
+           if(e.target.tagName === 'IMG'){
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+           }
+            //In this case usa image will not get removed because it has stopPropagation method, hence usa is out of reach of this eventListener
+        })
+        
     })
 </script>
 </html>
