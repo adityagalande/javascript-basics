@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<h1>>, initial-scale=1.0">
+    <title>CallBack Timeout Events</title>
+</head>
+<body>
+    <h1>Javascript code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const changeColor = function(){
+        document.body.style.backgroundColor = 'orange';
+        document.querySelector('h1').innerText = "Unites states of America & Canada"
+    }
+    // -------------------
+    // setTimeout(changeColor, 3000);
+
+    const chgColor = setTimeout(changeColor, 3000);
+    // -------------------
+
+    // Added clearTime on button event
+    document.querySelector('#stop').addEventListener('click', function(e){
+        //If you click on stop button before 3 sec then setTimeout will not occurss
+        clearTimeout(chgColor);
+        console.log("Event stopped")
+    })
+    // -------------------
+
+    // setTimeout(function(){
+    //     document.body.style.backgroundColor = 'pink';
+    // }, 2000);
+    // -------------------
+    
+
+
+
+
+
+
+    // let arr = [1,2,3,4]
+    // console.log(arr.map((v) => (v*2)).filter((v)=>(v > 3)))
+
+
+</script>
+</html>
