@@ -32,18 +32,23 @@
 
     //Event propogation (bubbling from inside to outside -> if it is FALSE, But if TRUE then outside to inside bubbling)
     document.querySelector('#images').addEventListener('click', function(e){
-        alert(e.target.tagName);
+        console.log(e.target.tagName);
         }, false)
                                             
     document.querySelector('#usa').addEventListener('click', function(e){
-        alert(e.target.id)
-        e.stopPropagation(); //This prevents bubbling.
+        console.log(e.target.id)
+        // e.stopPropagation(); //This prevents bubbling.
         }, false)
+    
+        // document.querySelector('#usa').addEventListener('click', function(e){
+        // console.log(e.target.id)
+        // // e.stopPropagation(); //This prevents bubbling.
+        // }, true)
 
         document.getElementById('google').addEventListener('click', function(e){
+            console.log('google clicked');
             e.preventDefault();
             e.stopPropagation();
-            //alert('google clicked');
         },false)
 
 
