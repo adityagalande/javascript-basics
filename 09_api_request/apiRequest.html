@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const requestUrl = "https://api.github.com/users/adityagalande";
+    const body = document.querySelector('body');
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function(){
+        console.log("This track request : "+this.readyState)
+
+        if(xhr.readyState === 4){
+            // console.log(this.responseText)
+            let obj = JSON.parse(this.responseText)
+            console.log(obj.following)
+            
+            // ------Set IMG Using URL------
+            let profileUrl = obj.avatar_url
+            let profileImg = document.createElement('img')
+            profileImg.src = profileUrl;
+            body.append(profileImg)
+
+            // ------Set IMG Using URL------
+            let nameUrl = obj.name;
+            let profileName = document.createElement('h1');
+            profileName.innerHTML = nameUrl;
+            body.append(profileName);
+
+        }
+    }
+
+    console.log(xhr.readyState)  //Here state is - 1
+    xhr.send();
+</script>
+</html>
