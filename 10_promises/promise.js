@@ -37,7 +37,7 @@ const promiseThree = new Promise(function(resolve, reject){
 
 promiseThree.then(function(val){
     console.log(val.age)
-    return val.age;
+    return val;
 }).then(function(val){
     console.log(val.name)
 }).catch(function(errorVal){
@@ -69,3 +69,28 @@ async function consumePromiseFour(){
 }
 
 consumePromiseFour();
+
+//-----------fetch() using async & await-----------------
+async function getUsersData(){
+    try{
+        const response = await fetch('https://api.github.com/users/adityagalande');
+        const data = await response.json();
+        console.log(data);
+    }catch(error){
+        console.log("E: ", error);
+    }
+}
+
+getUsersData();
+
+//-------fetch() using then, catch, finally------------
+
+fetch('https://api.github.com/users/adityagalande').then(function(response){
+    return response.json();
+}).then((data) => {
+    console.log(`My Name is-----> ${data.name}`);
+}).catch((e)=>{
+    console.log('error')
+}).finally(()=>{
+    console.log('finally block executed')
+})
