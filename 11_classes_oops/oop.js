@@ -45,9 +45,17 @@ user.prototype.printMe = function(){
 userTwo.printMe(); // It will work properly
 
 
-//Using prototype we can inject custome functions
+//Using prototype we can inject/create custome functions
 user.prototype.customFunctionInjected = function(){
     console.log(`custom function : ${this.username}`)
 }
 
 userTwo.customFunctionInjected()
+
+
+
+//This is not work to access username value
+const temp = function(){
+    return(`-----> ${this.username}`)
+}
+console.log(temp);
