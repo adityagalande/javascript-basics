@@ -42,4 +42,12 @@ user.prototype.printMe = function(){
 }
 
 //userOne.printMe() //If new keyword is not used then unable to understand context coz new copy of object is not created
-userTwo.printMe() // It will work properly
+userTwo.printMe(); // It will work properly
+
+
+//Using prototype we can inject custome functions
+user.prototype.customFunctionInjected = function(){
+    console.log(`custom function : ${this.username}`)
+}
+
+userTwo.customFunctionInjected()
