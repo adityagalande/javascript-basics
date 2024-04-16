@@ -90,7 +90,7 @@ fetch('https://api.github.com/users/adityagalande').then(function(response){
 }).then((data) => {
     console.log(`My Name is-----> ${data.name}`);
 }).catch((e)=>{
-    console.log('error')
+    console.log(e,'error')
 }).finally(()=>{
     console.log('finally block executed')
 })
